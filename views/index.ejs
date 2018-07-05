@@ -1,0 +1,36 @@
+<% include ./partials/header %>
+
+<div class="ui main container segment">
+        
+        <div class="container">
+            <div class="ui huge header">
+                Headlines
+            </div>
+            <div class="row">
+                <%newsData.forEach((news)=>{%>
+
+                    <div class="col-lg-12">
+                        <div class = "news-container ui segment">
+
+                            <img class="mini-image" src="<%=news.banner %>" alt="">
+                            <div class="news-desc">
+                                <h2><%=news.title%></h2>
+                                <h4><%=news.date%></h4>
+                                <%var text = news.text.substring(0, 300) %>
+                                <p class="paragraph"><%=text%></p>
+                            </div>
+                            <div class="button-set">
+                                <a href="/admin/<%=news._id%>/edit" class="ui orange button">Edit</a>
+                                <form id="delete-button" action="/admin/<%=news._id%>?_method=DELETE" method="POST">
+                                    <button  class="ui red button">DELETE</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                <%})%>
+            </div>
+        </div>
+</div>
+
+<% include ./partials/footer%>

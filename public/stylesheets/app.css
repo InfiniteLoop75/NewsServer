@@ -1,0 +1,31 @@
+i.icon{
+    font-size: 2em;
+}
+.container.main{
+    margin-top: 7.0em;
+    width: 70%;
+}
+.news-container{
+    clear: both;
+    margin-bottom: 5px;
+}
+.mini-image{
+    float: left;
+    width: 267px;
+    height: 150px;
+    margin: 10px;
+}
+
+.news-desc{
+    padding: 10px;
+}
+.paragraph{
+    text-align: justify
+}
+.button-set{
+    clear: both;
+    margin: 10px;
+}
+#delete-button{
+    display: inline;
+}
